@@ -40,9 +40,12 @@ func main() {
 
 	indexes := rand.Perm(100)
 	reader := bufio.NewReader(os.Stdin)
+	yes := make([]int, 0, 100)
+	no := make([]int, 0, 100)
 
-	fmt.Println("To jump between questions and answers, simply press Enter.")
 	clearScreen()
+	fmt.Println("To show the answers press Enter. If the answer was correct press 'y' otherwise press 'n'")
+	fmt.Println("Press enter to continue")
 	reader.ReadString('\n')
 
 	indexesSet := make(map[int]bool)
@@ -80,7 +83,41 @@ func main() {
 				fmt.Printf("%s %s\n", sep, answer)
 			}
 
-			reader.ReadString('\n')
+			for {
+				fmt.Print("\n\nWas the answer correct? [y/n] ")
+				r, _, err := reader.ReadRune()
+				if err != nil {
+					log.Fatalf("error reading the answer: %s", err)
+				}
+				switch r {
+				case 'y':
+					yes = append(yes, index)
+					goto done
+				case 'n':
+					no = append(no, index)
+					goto done
+				}
+
+				clearScreen()
+				fmt.Printf("%d. %s\n", index, q)
+
+				sep := "  "
+				if len(answers) > 1 {
+					sep = " -"
+				}
+				for _, answer := range answers {
+					fmt.Printf("%s %s\n", sep, answer)
+				}
+			}
+		done:
+			reader.Reset(os.Stdin)
+		}
+
+		fmt.Println("Here's the list of the answers that you did not answer correctly:")
+		for _, index := range no {
+			for q := range questions[index] {
+				fmt.Printf("%d. %s\n", index, q)
+			}
 		}
 	}
 }
