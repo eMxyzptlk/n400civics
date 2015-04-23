@@ -113,11 +113,19 @@ func main() {
 			reader.Reset(os.Stdin)
 		}
 
-		fmt.Println("Here's the list of the answers that you did not answer correctly:")
-		for _, index := range no {
-			for q := range questions[index] {
-				fmt.Printf("%d. %s\n", index, q)
+		if len(no) > 0 {
+			fmt.Println("Here's the list of the answers that you did not answer correctly:")
+			cmd := "n400civics -question_list='"
+			sep := ""
+			for _, index := range no {
+				cmd = fmt.Sprintf("%s%s%d", cmd, sep, index)
+				for q := range questions[index] {
+					fmt.Printf("%d. %s\n", index, q)
+				}
+				sep = ","
 			}
+			cmd += "'"
+			fmt.Printf("\n\nHere's the command to run to pratice the questions you did not get right:\n%s\n", cmd)
 		}
 	}
 }
