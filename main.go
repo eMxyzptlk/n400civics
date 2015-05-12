@@ -20,7 +20,7 @@ func init() {
 
 var (
 	minQuestion  = flag.Int("min_question", 1, "The lowest question")
-	maxQuestion  = flag.Int("max_question", 100, "The highest question")
+	maxQuestion  = flag.Int("max_question", 101, "The highest question")
 	questionList = flag.String("question_list", "", "The list of the questions to display comma separated")
 	cmd          *exec.Cmd
 )
@@ -38,10 +38,10 @@ func clearScreen() {
 func main() {
 	flag.Parse()
 
-	indexes := rand.Perm(100)
+	indexes := rand.Perm(101)
 	reader := bufio.NewReader(os.Stdin)
-	yes := make([]int, 0, 100)
-	no := make([]int, 0, 100)
+	yes := make([]int, 0, 101)
+	no := make([]int, 0, 101)
 
 	clearScreen()
 	fmt.Println("To show the answers press Enter. If the answer was correct press 'y' otherwise press 'n'")

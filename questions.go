@@ -484,6 +484,5 @@ var questions = map[int]map[string][]string{
 		"Veterans Day",
 		"Thanksgiving",
 		"Christmas",
-		"",
 	}},
 }
