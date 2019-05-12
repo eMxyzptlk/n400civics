@@ -125,7 +125,7 @@ func main() {
 				sep = ","
 			}
 			cmd += "'"
-			fmt.Printf("\n\nHere's the command to run to pratice the questions you did not get right:\n%s\n", cmd)
+			fmt.Printf("\n\nHere's the command to run to practice the questions you did not get right:\n%s\n", cmd)
 		}
 	}
 }

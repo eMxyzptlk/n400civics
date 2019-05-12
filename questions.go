@@ -83,7 +83,7 @@ var questions = map[int]map[string][]string{
 	}},
 	20: {"Who is one of your state’s U.S. Senators now?": {
 		"Answers will vary.",
-		"For California it's 'Barbara Boxer' and 'Dianne Feinstein'",
+		"For California it's 'Kamala Harris' and 'Dianne Feinstein'",
 	}},
 	21: {"The House of Representatives has how many voting members?": {
 		"four hundred thirty-five (435)",
@@ -93,7 +93,7 @@ var questions = map[int]map[string][]string{
 	}},
 	23: {"Name your U.S. Representative.": {
 		"Answers will vary.",
-		"For the 17th District of California: Mike Honda",
+		"For the 17th District of California: Zoe Lofgren",
 	}},
 	24: {"Who does a U.S. Senator represent?": {
 		"all people of the state",
@@ -110,13 +110,10 @@ var questions = map[int]map[string][]string{
 		"November",
 	}},
 	28: {"What is the name of the President of the United States now?": {
-		"Barack Obama",
-		"Obama",
+		"Donald Trump",
 	}},
 	29: {"What is the name of the Vice President of the United States now?": {
-		"Joseph R. Biden, Jr.",
-		"Joe Biden",
-		"Biden",
+		"Mike Pence",
 	}},
 	30: {"If the President can no longer serve, who becomes President?": {
 		"the Vice President",
@@ -184,7 +181,7 @@ var questions = map[int]map[string][]string{
 	}},
 	43: {"Who is the Governor of your state now?": {
 		"Answers will vary.",
-		"For California: Jerry Brown",
+		"For California: Gavin Newson",
 	}},
 	44: {"What is the capital of your state?": {
 		"Sacramento",
@@ -196,7 +193,7 @@ var questions = map[int]map[string][]string{
 		"Democratic (Party)",
 	}},
 	47: {"What is the name of the Speaker of the House of Representatives now?": {
-		"(John) Boehner",
+		"Nancy Pelosi",
 	}},
 	48: {"There are four amendments to the Constitution about who can vote. Describe one of them.": {
 		"Citizens eighteen (18) and older (can vote).",
