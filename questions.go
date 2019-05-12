@@ -214,7 +214,7 @@ var questions = map[int]map[string][]string{
 		"freedom of speech",
 		"freedom of assembly",
 		"freedom to petition the government",
-		"freedom of worship",
+		"freedom of religion",
 		"the right to bear arms",
 	}},
 	52: {"What do we show loyalty to when we say the Pledge of Allegiance?": {
