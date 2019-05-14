@@ -190,7 +190,7 @@ var questions = map[int]map[string][]string{
 		"Democratic and Republican",
 	}},
 	46: {"What is the political party of the President now?": {
-		"Democratic (Party)",
+		"Republican (Party)",
 	}},
 	47: {"What is the name of the Speaker of the House of Representatives now?": {
 		"Nancy Pelosi",
